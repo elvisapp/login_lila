@@ -1,13 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:login_lila/src/common/theme_helper.dart';
-
+import 'package:login_lila/src/pages/login/login_controller.dart';
 import '../forgot_password_page.dart';
-import '../profile_page.dart';
 import '../register/registration_page.dart';
-import '../widgets/header_widget.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -17,13 +14,15 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  double _headerHeight = 250;
-  Key _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
+  bool checkedValue = false;
+  bool checkboxValue = false;
+  final LoginController _to = LoginController();
 
   @override
   Widget build(BuildContext context) {
+    _to.int(context);
     return Scaffold(
-      //backgroundColor: Color.fromARGB(255, 186, 25, 207),
       body: SafeArea(
         child: SingleChildScrollView(
             child: Container(
@@ -40,13 +39,16 @@ class _LoginPageState extends State<LoginPage> {
               _textDescripcion(),
               SizedBox(height: MediaQuery.of(context).size.height * 0.11),
               //key: _formKey,
-              _textFieldUsuario(),
+              textItem("Email", _to.emailController, false),
               const SizedBox(height: 30.0),
-              _textFieldPassword(),
+              textItem("Password", _to.passwordController, true),
               const SizedBox(height: 15.0),
               _textOlvidasteContrasena(),
               _buttonLogin(),
               _textNotienecuenta(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.11,
+              ),
             ],
           ),
         )),
@@ -94,31 +96,40 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  //Metodo ingrese usuario
-  Widget _textFieldUsuario() {
+  Widget textItem(
+      String name, TextEditingController controller, bool obsecureText) {
     return Container(
-      // ignore: sort_child_properties_last
-      margin: const EdgeInsets.symmetric(horizontal: 30),
-      child: TextField(
-        decoration: ThemeHelper()
-            .textInputDecoration('Nombre de usuario', 'Enter your user name'),
+      width: MediaQuery.of(context).size.width - 70,
+      height: 55,
+      child: TextFormField(
+        controller: controller,
+        obscureText: obsecureText,
+        style: const TextStyle(
+          fontSize: 17,
+          color: Colors.white,
+        ),
+        decoration: InputDecoration(
+          labelText: name,
+          labelStyle: const TextStyle(
+            fontSize: 17,
+            color: Colors.white,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15),
+            borderSide: const BorderSide(
+              width: 1.5,
+              color: Colors.amber,
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(15),
+            borderSide: const BorderSide(
+              width: 1,
+              color: Colors.grey,
+            ),
+          ),
+        ),
       ),
-      decoration: ThemeHelper().inputBoxDecorationShaddow(),
-    );
-  }
-
-  //Metodo password
-  Widget _textFieldPassword() {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        horizontal: 30,
-      ),
-      child: TextField(
-        obscureText: true,
-        decoration: ThemeHelper()
-            .textInputDecoration('Password', 'Enter your password'),
-      ),
-      decoration: ThemeHelper().inputBoxDecorationShaddow(),
     );
   }
 
@@ -160,10 +171,10 @@ class _LoginPageState extends State<LoginPage> {
                 fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
           ),
         ),
-        onPressed: () {
-          //After successful login we will redirect to profile page. Let's create profile page now
-          Navigator.pushReplacement(
-              context, MaterialPageRoute(builder: (context) => ProfilePage()));
+        onPressed: () async {
+          //if (_formKey.currentState!.validate()) {
+          _to.controllerLogin(context);
+          // }
         },
       ),
     );
