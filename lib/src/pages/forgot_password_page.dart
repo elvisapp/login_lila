@@ -118,14 +118,14 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                                   ),
                                 ),
                                 onPressed: () {
-                                  if (_formKey.currentState!.validate()) {
-                                    Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              ForgotPasswordVerificationPage()),
-                                    );
-                                  }
+                                  // if (_formKey.currentState!.validate()) {
+                                  //   Navigator.pushReplacement(
+                                  //     context,
+                                  //     MaterialPageRoute(
+                                  //         builder: (context) =>
+                                  //             ForgotPasswordVerificationPage()),
+                                  //   );
+                                  // }
                                 },
                               ),
                             ),

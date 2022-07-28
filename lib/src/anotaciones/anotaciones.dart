@@ -1,5 +1,20 @@
 /*
 
+
+Variant: debugAndroidTest
+Config: debug
+Store: C:\Users\elvis.com\.android\debug.keystore
+Alias: AndroidDebugKey
+MD5: 87:C9:F5:C2:C5:E9:4D:18:1D:36:F7:75:85:A8:65:54
+SHA1: DF:89:2F:54:00:62:26:4E:18:30:4F:D1:E8:09:A9:A8:D0:A2:C7:CD
+SHA-256: 56:7D:1D:D8:21:25:59:2B:A8:E7:68:84:3A:E9:9C:07:9D:E9:B2:87:7D:2C:D6:E4:52:A5:27:4B:F6:6C:FB:D2
+Valid until: quinta-feira, 23 de maio de 2052
+Valid until: quinta-feira, 23 de maio de 2052
+
+
+
+
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

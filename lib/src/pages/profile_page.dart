@@ -1,27 +1,44 @@
-import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:login_lila/src/pages/login/login_page.dart';
+import 'package:login_lila/src/pages/register/controller_redes.dart';
 import 'package:login_lila/src/pages/splash_screen.dart';
+import 'package:login_lila/src/pages/utils/authentication.dart';
+import 'package:login_lila/src/pages/utils/colors.dart';
 import 'package:login_lila/src/pages/widgets/header_widget.dart';
-
 import 'forgot_password_page.dart';
-import 'forgot_password_verification_page.dart';
 import 'register/registration_page.dart';
 
 class ProfilePage extends StatefulWidget {
+  const ProfilePage({Key? key, required User user})
+      : _user = user,
+        super(key: key);
+  final User _user;
+
   @override
-  State<StatefulWidget> createState() {
-    return _ProfilePageState();
-  }
+  State<StatefulWidget> createState() => _ProfilePageState();
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+  final RedesController _to = RedesController();
+  late User _user;
+  bool _isSigningOut = false;
   double _drawerIconSize = 24;
   double _drawerFontSize = 17;
 
+//////////
+  @override
+  void initState() {
+    _user = widget._user;
+
+    super.initState();
+  }
+  ////////////
+
   @override
   Widget build(BuildContext context) {
+    _to.init(context);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -105,14 +122,57 @@ class _ProfilePageState extends State<ProfilePage> {
                     ],
                   ),
                 ),
-                child: Container(
-                  alignment: Alignment.bottomLeft,
+                child: Column(
+                  children: [
+                    Row(),
+                    _user.photoURL != null
+                        ? ClipOval(
+                            child: Material(
+                              color: CustomColors.firebaseGrey.withOpacity(0.3),
+                              child: Image.network(
+                                _user.photoURL!,
+                                fit: BoxFit.fitHeight,
+                              ),
+                            ),
+                          )
+                        : ClipOval(
+                            child: Material(
+                              color: CustomColors.firebaseGrey.withOpacity(0.3),
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Icon(
+                                  Icons.person,
+                                  size: 60,
+                                  color: CustomColors.firebaseGrey,
+                                ),
+                              ),
+                            ),
+                          ),
+                    //SizedBox(height: 16.0),
+                    //////////////Saluudo del sistema
+                    Text(
+                      _user.displayName!,
+                      style: TextStyle(
+                        color: CustomColors.firebaseYellow,
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // SizedBox(
+              //   height: MediaQuery.of(context).size.height * 0.11,
+              // ),
+
+              ListTile(
+                title: Center(
                   child: Text(
-                    "Menu elvis.com",
+                    '( ${_user.email!} )',
                     style: TextStyle(
-                        fontSize: 25,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold),
+                      color: CustomColors.firebaseNavy,
+                      fontSize: 15,
+                      letterSpacing: 0.5,
+                    ),
                   ),
                 ),
               ),
@@ -145,11 +205,20 @@ class _ProfilePageState extends State<ProfilePage> {
                       fontSize: _drawerFontSize,
                       color: Theme.of(context).accentColor),
                 ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => LoginPage()),
-                  );
+                onTap: () async {
+                  setState(() {
+                    _isSigningOut = true;
+                  });
+                  await Authentication.signOut(context: context);
+                  setState(() {
+                    _isSigningOut = false;
+                  });
+                  Navigator.of(context)
+                      .pushReplacement(_to.routeToSignInScreen());
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(builder: (context) => LoginPage()),
+                  // );
                 },
               ),
               Divider(
@@ -214,11 +283,11 @@ class _ProfilePageState extends State<ProfilePage> {
                       color: Theme.of(context).accentColor),
                 ),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => ForgotPasswordVerificationPage()),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //       builder: (context) => ForgotPasswordVerificationPage()),
+                  // );
                 },
               ),
               Divider(
@@ -245,9 +314,11 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ),
       ),
+      ////////////////////////////////////////////////////////////aqui esta el body
       body: SingleChildScrollView(
         child: Stack(
           children: [
+            ////////////////////// aqui esta la decoración
             Container(
               height: 100,
               child: HeaderWidget(100, false, Icons.house_rounded),
@@ -337,9 +408,52 @@ class _ProfilePageState extends State<ProfilePage> {
                                           subtitle: Text("elvis.com@gmail.com"),
                                         ),
                                         ListTile(
-                                          leading: Icon(Icons.phone),
-                                          title: Text("Phone"),
-                                          subtitle: Text("99--99876-56"),
+                                          leading: Icon(Icons.person),
+                                          title: Text("Sobre mi"),
+                                          subtitle: Text(
+                                              "Siempre siendo el mejor abuelo."),
+                                        ),
+                                        ListTile(
+                                          leading: Icon(Icons.person),
+                                          title: Text("Sobre mi"),
+                                          subtitle: Text(
+                                              "Siempre siendo el mejor abuelo."),
+                                        ),
+                                        ListTile(
+                                          leading: Icon(Icons.person),
+                                          title: Text("Sobre mi"),
+                                          subtitle: Text(
+                                              "Siempre siendo el mejor abuelo."),
+                                        ),
+                                        ListTile(
+                                          leading: Icon(Icons.person),
+                                          title: Text("Sobre mi"),
+                                          subtitle: Text(
+                                              "Siempre siendo el mejor abuelo."),
+                                        ),
+                                        ListTile(
+                                          leading: Icon(Icons.person),
+                                          title: Text("Sobre mi"),
+                                          subtitle: Text(
+                                              "Siempre siendo el mejor abuelo."),
+                                        ),
+                                        ListTile(
+                                          leading: Icon(Icons.person),
+                                          title: Text("Sobre mi"),
+                                          subtitle: Text(
+                                              "Siempre siendo el mejor abuelo."),
+                                        ),
+                                        ListTile(
+                                          leading: Icon(Icons.person),
+                                          title: Text("Sobre mi"),
+                                          subtitle: Text(
+                                              "Siempre siendo el mejor abuelo."),
+                                        ),
+                                        ListTile(
+                                          leading: Icon(Icons.person),
+                                          title: Text("Sobre mi"),
+                                          subtitle: Text(
+                                              "Siempre siendo el mejor abuelo."),
                                         ),
                                         ListTile(
                                           leading: Icon(Icons.person),

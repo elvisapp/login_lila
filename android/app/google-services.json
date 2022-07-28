@@ -103,11 +103,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "565817267863-qtjf8h2p6kn3mn6uq1kqp0utq6e8o0rr.apps.googleusercontent.com",
+          "client_id": "565817267863-0u4hi91nub65tuilr8obo559j1j2g52c.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.elvis.login_lila",
-            "certificate_hash": "5dfb69372c3df5c12a18612cb75904e16aa05d82"
+            "certificate_hash": "df892f540062264e18304fd1e809a9a8d0a2c7cd"
           }
         },
         {
@@ -151,6 +151,50 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.elvis.teste",
+            "certificate_hash": "5dfb69372c3df5c12a18612cb75904e16aa05d82"
+          }
+        },
+        {
+          "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfAHaQizxtwGoD5B2nEekSkTqOsmFPMnc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "565817267863-2nt6ougc876bpftq6tprea4tqnk23jdl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.elvis.developedProjects"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565817267863:android:4ac4bcca8cf33d067efbd2",
+        "android_client_info": {
+          "package_name": "com.souvikbiswas.flutterfire_samples"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565817267863-nmdp0djppeobg3pm03jv8pcaebd9f15v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.souvikbiswas.flutterfire_samples",
             "certificate_hash": "5dfb69372c3df5c12a18612cb75904e16aa05d82"
           }
         },

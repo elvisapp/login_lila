@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:login_lila/src/pages/profile_page.dart';
 import 'package:login_lila/src/pages/utils/authentication.dart';
 
-class LoginController {
+class RegisterController {
   bool _isSigningIn = false;
   BuildContext? context;
   Future? int(BuildContext context) {
@@ -12,50 +12,69 @@ class LoginController {
   }
 
   firebase_auth.FirebaseAuth firebaseAuth = firebase_auth.FirebaseAuth.instance;
+  final TextEditingController nomeController = TextEditingController();
+  final TextEditingController apelidoController = TextEditingController();
+
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   bool circular = false;
 
   ///Metodos de esta classe]
 
-  void controllerLogin(BuildContext context) async {
+  void controllerRegister(BuildContext context, String name) async {
+    validator:
+    (val) {
+      if (!(val!.isEmpty) &&
+          !RegExp(r"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,253}[a-zA-Z0-9])?)*$")
+              .hasMatch(val)) {
+        return "Enter a valid email address";
+      }
+      return null;
+    };
     try {
       firebase_auth.UserCredential userCredential =
-          await firebase_auth.FirebaseAuth.instance.signInWithEmailAndPassword(
-              email: emailController.text.trim(),
-              password: passwordController.text.trim());
+          await firebaseAuth.createUserWithEmailAndPassword(
+              email: emailController.text, password: passwordController.text);
+      ////////////////////
       final snackbar = (SnackBar(
-        content: Text("welcome, login successful"),
+        content: Text("welcome, Register successful"),
         backgroundColor: Color.fromARGB(255, 71, 2, 2),
       ));
       ScaffoldMessenger.of(context).showSnackBar(snackbar);
-      print('Logado con exito');
+      print('Registro exitos');
       print(userCredential.user?.email);
       circular = false;
-      _isSigningIn = true;
 
-      // // User? user = await Authentication.signInWithGoogle(context: context);
+      _isSigningIn = true;
       // User? user = FirebaseAuth.instance.currentUser;
+
+      // User? user = await Authentication.signInWithGoogle(context: context);
 
       _isSigningIn = false;
 
-      // Navigator.of(context).pushReplacement(
-      //   MaterialPageRoute(
-      //     builder: (context) => ProfilePage(user: user ,),
-      //   ),
-      // );
-
+      // if (user != null) {
+      //   Navigator.of(context).pushReplacement(
+      //     MaterialPageRoute(
+      //       builder: (context) => ProfilePage(
+      //         user: user,
+      //       ),
+      //     ),
+      //   );
+      // }
       // Navigator.pushAndRemoveUntil(
       //     context,
       //     MaterialPageRoute(builder: (builder) => ProfilePage()),
       //     (route) => false);
     } catch (e) {
       print("Error: ${e.toString()}");
+      print('No se pudo registrar');
       final snackbar = (SnackBar(
-        content: Text("Falha ao realizar ologin"),
+        content: Text("Falha ao realizar Register"),
         backgroundColor: Color.fromARGB(255, 61, 2, 2),
       ));
       ScaffoldMessenger.of(context).showSnackBar(snackbar);
+
+      circular = false;
     }
     FocusScope.of(context).requestFocus(new FocusNode());
   }
