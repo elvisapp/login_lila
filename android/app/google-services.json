@@ -1,49 +1,49 @@
 {
   "project_info": {
-    "project_number": "565817267863",
-    "firebase_url": "https://projectsflutter22-default-rtdb.firebaseio.com",
-    "project_id": "projectsflutter22",
-    "storage_bucket": "projectsflutter22.appspot.com"
+    "project_number": "1075110477713",
+    "firebase_url": "https://login-61e0f-default-rtdb.firebaseio.com",
+    "project_id": "login-61e0f",
+    "storage_bucket": "login-61e0f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:565817267863:android:30895679158724637efbd2",
+        "mobilesdk_app_id": "1:1075110477713:android:446ed5d8dc07e17b92e430",
         "android_client_info": {
-          "package_name": "com.elvis.agenda"
+          "package_name": "com.elvis.blog_venezuela"
         }
       },
       "oauth_client": [
         {
-          "client_id": "565817267863-2aobbtlj944db0t72c1g5ljgvu9ihc6k.apps.googleusercontent.com",
+          "client_id": "1075110477713-scjv720gugc1h9qgai51e9gcp4s4fbi9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.elvis.agenda",
-            "certificate_hash": "5dfb69372c3df5c12a18612cb75904e16aa05d82"
+            "package_name": "com.elvis.blog_venezuela",
+            "certificate_hash": "df892f540062264e18304fd1e809a9a8d0a2c7cd"
           }
         },
         {
-          "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+          "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAfAHaQizxtwGoD5B2nEekSkTqOsmFPMnc"
+          "current_key": "AIzaSyAdhkDWEBieYYmCI46obQv7cngYzRt_AhI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+              "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "565817267863-2nt6ougc876bpftq6tprea4tqnk23jdl.apps.googleusercontent.com",
+              "client_id": "1075110477713-8spiupb3smm6l726754d8odtcom33jrc.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.elvis.developedProjects"
+                "bundle_id": "com.elvis.blog"
               }
             }
           ]
@@ -52,42 +52,42 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:565817267863:android:be04ca194fc4c1ea7efbd2",
+        "mobilesdk_app_id": "1:1075110477713:android:e18f0806ddbf33d292e430",
         "android_client_info": {
-          "package_name": "com.elvis.developed_projects"
+          "package_name": "com.elvis.firestore_database"
         }
       },
       "oauth_client": [
         {
-          "client_id": "565817267863-a9ee3k1micdu5ehuc28fb21d1uiv619g.apps.googleusercontent.com",
+          "client_id": "1075110477713-4evibmrt7s0bdlbhkcusqhhkutgj95hr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.elvis.developed_projects",
-            "certificate_hash": "5dfb69372c3df5c12a18612cb75904e16aa05d82"
+            "package_name": "com.elvis.firestore_database",
+            "certificate_hash": "df892f540062264e18304fd1e809a9a8d0a2c7cd"
           }
         },
         {
-          "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+          "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAfAHaQizxtwGoD5B2nEekSkTqOsmFPMnc"
+          "current_key": "AIzaSyAdhkDWEBieYYmCI46obQv7cngYzRt_AhI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+              "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "565817267863-2nt6ougc876bpftq6tprea4tqnk23jdl.apps.googleusercontent.com",
+              "client_id": "1075110477713-8spiupb3smm6l726754d8odtcom33jrc.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.elvis.developedProjects"
+                "bundle_id": "com.elvis.blog"
               }
             }
           ]
@@ -96,14 +96,58 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:565817267863:android:5c8c25ee5f997b0b7efbd2",
+        "mobilesdk_app_id": "1:1075110477713:android:f98177a2db324bd492e430",
+        "android_client_info": {
+          "package_name": "com.elvis.login_google"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075110477713-a3dqvcjkohgalfpb0u4ug38tvjha0v3n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elvis.login_google",
+            "certificate_hash": "df892f540062264e18304fd1e809a9a8d0a2c7cd"
+          }
+        },
+        {
+          "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdhkDWEBieYYmCI46obQv7cngYzRt_AhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1075110477713-8spiupb3smm6l726754d8odtcom33jrc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.elvis.blog"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075110477713:android:7cb977e1f7f0113692e430",
         "android_client_info": {
           "package_name": "com.elvis.login_lila"
         }
       },
       "oauth_client": [
         {
-          "client_id": "565817267863-0u4hi91nub65tuilr8obo559j1j2g52c.apps.googleusercontent.com",
+          "client_id": "1075110477713-fgbfh9hehgubfre7lkmst2ojphfto3u1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.elvis.login_lila",
@@ -111,27 +155,27 @@
           }
         },
         {
-          "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+          "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAfAHaQizxtwGoD5B2nEekSkTqOsmFPMnc"
+          "current_key": "AIzaSyAdhkDWEBieYYmCI46obQv7cngYzRt_AhI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+              "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "565817267863-2nt6ougc876bpftq6tprea4tqnk23jdl.apps.googleusercontent.com",
+              "client_id": "1075110477713-8spiupb3smm6l726754d8odtcom33jrc.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.elvis.developedProjects"
+                "bundle_id": "com.elvis.blog"
               }
             }
           ]
@@ -140,86 +184,86 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:565817267863:android:efa8884582f4605e7efbd2",
+        "mobilesdk_app_id": "1:1075110477713:android:fe01d3b6cbe20cd392e430",
+        "android_client_info": {
+          "package_name": "com.elvis.storage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075110477713-hsn3f9470fbl3bfcblqrerle22nkgugb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elvis.storage",
+            "certificate_hash": "df892f540062264e18304fd1e809a9a8d0a2c7cd"
+          }
+        },
+        {
+          "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdhkDWEBieYYmCI46obQv7cngYzRt_AhI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1075110477713-8spiupb3smm6l726754d8odtcom33jrc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.elvis.blog"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075110477713:android:ef36013dbdd6fe6d92e430",
         "android_client_info": {
           "package_name": "com.elvis.teste"
         }
       },
       "oauth_client": [
         {
-          "client_id": "565817267863-p8hharcupll86vet3h5mjfcg5fkfe707.apps.googleusercontent.com",
+          "client_id": "1075110477713-tdb9er0u6hn37dkflfr4rjhoqnb6hfkc.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.elvis.teste",
-            "certificate_hash": "5dfb69372c3df5c12a18612cb75904e16aa05d82"
+            "certificate_hash": "df892f540062264e18304fd1e809a9a8d0a2c7cd"
           }
         },
         {
-          "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+          "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAfAHaQizxtwGoD5B2nEekSkTqOsmFPMnc"
+          "current_key": "AIzaSyAdhkDWEBieYYmCI46obQv7cngYzRt_AhI"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
+              "client_id": "1075110477713-g1knje81riuhqbselevv786o1i7bvnjk.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "565817267863-2nt6ougc876bpftq6tprea4tqnk23jdl.apps.googleusercontent.com",
+              "client_id": "1075110477713-8spiupb3smm6l726754d8odtcom33jrc.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.elvis.developedProjects"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:565817267863:android:4ac4bcca8cf33d067efbd2",
-        "android_client_info": {
-          "package_name": "com.souvikbiswas.flutterfire_samples"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "565817267863-nmdp0djppeobg3pm03jv8pcaebd9f15v.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.souvikbiswas.flutterfire_samples",
-            "certificate_hash": "5dfb69372c3df5c12a18612cb75904e16aa05d82"
-          }
-        },
-        {
-          "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAfAHaQizxtwGoD5B2nEekSkTqOsmFPMnc"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "565817267863-m134ijilnojj0letsf8h7nj9dbfthrjq.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "565817267863-2nt6ougc876bpftq6tprea4tqnk23jdl.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.elvis.developedProjects"
+                "bundle_id": "com.elvis.blog"
               }
             }
           ]
